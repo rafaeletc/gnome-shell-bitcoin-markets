@@ -11,7 +11,9 @@ export class Api extends BaseProvider.Api {
     return `https://api.novadax.com/v1/market/ticker/?symbol=${base}_${quote}`;
   }
 
-  getLast({ data }) {
-    return data[lastPrice];
+  getLast(data) {
+    if (data.message == 'Success') {
+      return data.data[lastPrice];
+    }
   }
 }

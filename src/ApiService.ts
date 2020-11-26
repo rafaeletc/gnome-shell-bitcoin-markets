@@ -2,7 +2,6 @@ const Mainloop = imports.mainloop;
 
 import * as BaseProvider from './BaseProvider';
 
-import * as ProviderNovaDAX from './providers/ProviderNovaDAX';
 import * as ProviderBinance from './providers/ProviderBinance';
 import * as ProviderBinanceFutures from './providers/ProviderBinanceFutures';
 import * as ProviderBitfinex from './providers/ProviderBitfinex';
@@ -23,13 +22,13 @@ import * as ProviderHitBTC from './providers/ProviderHitBTC';
 import * as ProviderHuobi from './providers/ProviderHuobi';
 import * as ProviderKraken from './providers/ProviderKraken';
 import * as ProviderKucoin from './providers/ProviderKucoin';
+import * as ProviderNovaDAX from './providers/ProviderNovaDAX';
 import * as ProviderPaymium from './providers/ProviderPaymium';
 import * as ProviderPoloniex from './providers/ProviderBitPay';
 import * as ProviderSatangPro from './providers/ProviderSatangPro';
 import * as ProviderVccExchange from './providers/ProviderVccExchange';
 
 export const Providers: Record<string, BaseProvider.Api> = {
-  novadax: new ProviderNovaDAX.Api(),
   binance: new ProviderBinance.Api(),
   binanceFutures: new ProviderBinanceFutures.Api(),
   bitfinex: new ProviderBitfinex.Api(),
@@ -50,6 +49,7 @@ export const Providers: Record<string, BaseProvider.Api> = {
   huobi: new ProviderHuobi.Api(),
   kraken: new ProviderKraken.Api(),
   kucoin: new ProviderKucoin.Api(),
+  novadax: new ProviderNovaDAX.Api(),
   paymium: new ProviderPaymium.Api(),
   poloniex: new ProviderPoloniex.Api(),
   satangpro: new ProviderSatangPro.Api(),

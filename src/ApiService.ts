@@ -2,6 +2,7 @@ const Mainloop = imports.mainloop;
 
 import * as BaseProvider from './BaseProvider';
 
+import * as ProviderNovaDAX from './providers/ProviderNovadax';
 import * as ProviderBinance from './providers/ProviderBinance';
 import * as ProviderBinanceFutures from './providers/ProviderBinanceFutures';
 import * as ProviderBitfinex from './providers/ProviderBitfinex';
@@ -28,6 +29,7 @@ import * as ProviderSatangPro from './providers/ProviderSatangPro';
 import * as ProviderVccExchange from './providers/ProviderVccExchange';
 
 export const Providers: Record<string, BaseProvider.Api> = {
+  novadax: new ProviderNovaDAX.Api(),
   binance: new ProviderBinance.Api(),
   binanceFutures: new ProviderBinanceFutures.Api(),
   bitfinex: new ProviderBitfinex.Api(),

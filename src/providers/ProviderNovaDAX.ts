@@ -13,7 +13,7 @@ export class Api extends BaseProvider.Api {
 
   getLast(data) {
     if (data.message == 'Success') {
-      return data.data[lastPrice];
+      return data.data.lastPrice;
     }
   }
 }

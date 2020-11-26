@@ -317,21 +317,6 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
     class Api$1 extends Api {
         constructor() {
             super(...arguments);
-            this.apiName = 'NovaDAX';
-            this.apiDocs = [['API Docs', 'https://doc.novadax.com/en-US/#get-latest-ticker-for-specific-pair']];
-            this.interval = 15;
-        }
-        getUrl({ base, quote }) {
-            return `https://api.novadax.com/v1/market/ticker/?symbol=${base}_${quote}`;
-        }
-        getLast({ data }) {
-            return data[lastPrice];
-        }
-    }
-
-    class Api$2 extends Api {
-        constructor() {
-            super(...arguments);
             this.apiName = 'Binance';
             this.apiDocs = [['API Docs', 'https://binance-docs.github.io/apidocs/spot/en/#symbol-price-ticker']];
             this.interval = 15;
@@ -344,7 +329,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$3 extends Api {
+    class Api$2 extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'Binance Futures';
@@ -364,7 +349,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$4 extends Api {
+    class Api$3 extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'Bitfinex';
@@ -404,7 +389,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$5 extends Api {
+    class Api$4 extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'BitMEX';
@@ -430,7 +415,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$6 extends Api {
+    class Api$5 extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'BitPay';
@@ -449,7 +434,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$7 extends Api {
+    class Api$6 extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'Bitso';
@@ -472,7 +457,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$8 extends Api {
+    class Api$7 extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'Bitstamp';
@@ -490,7 +475,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$9 extends Api {
+    class Api$8 extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'Blinktrade';
@@ -508,7 +493,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$a extends Api {
+    class Api$9 extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'BTCMarkets';
@@ -530,7 +515,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$b extends Api {
+    class Api$a extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'BX.in.th';
@@ -554,7 +539,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$c extends Api {
+    class Api$b extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'CEX.IO';
@@ -575,7 +560,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$d extends Api {
+    class Api$c extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'Coinbase';
@@ -599,7 +584,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$e extends Api {
+    class Api$d extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'CoinGecko';
@@ -629,7 +614,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$f extends Api {
+    class Api$e extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'CoinMarketCap';
@@ -654,7 +639,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$g extends Api {
+    class Api$f extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'CryptoCompare';
@@ -672,7 +657,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$h extends Api {
+    class Api$g extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'FTX exchange';
@@ -687,7 +672,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$i extends Api {
+    class Api$h extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'HitBTC';
@@ -702,7 +687,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$j extends Api {
+    class Api$i extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'Huobi';
@@ -722,7 +707,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$k extends Api {
+    class Api$j extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'Kraken';
@@ -747,7 +732,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
     }
 
-    class Api$l extends Api {
+    class Api$k extends Api {
         constructor() {
             super(...arguments);
             this.apiName = 'Kucoin';
@@ -762,6 +747,23 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
                 throw new Error(msg);
             }
             return data.price;
+        }
+    }
+
+    class Api$l extends Api {
+        constructor() {
+            super(...arguments);
+            this.apiName = 'NovaDAX';
+            this.apiDocs = [['API Docs', 'https://doc.novadax.com/en-US/#get-latest-ticker-for-specific-pair']];
+            this.interval = 15;
+        }
+        getUrl({ base, quote }) {
+            return `https://api.novadax.com/v1/market/ticker/?symbol=${base}_${quote}`;
+        }
+        getLast(data) {
+            if (data.message == 'Success') {
+                return data.data[lastPrice];
+            }
         }
     }
 
@@ -824,29 +826,29 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
 
     const Mainloop$1 = imports.mainloop;
     const Providers = {
-        novadax: new Api$1(),
-        binance: new Api$2(),
-        binanceFutures: new Api$3(),
-        bitfinex: new Api$4(),
-        bitmex: new Api$5(),
-        bitpay: new Api$6(),
-        bitso: new Api$7(),
-        bitstamp: new Api$8(),
-        blinktrade: new Api$9(),
-        btcmarkets: new Api$a(),
-        bxinth: new Api$b(),
-        cexio: new Api$c(),
-        coinbase: new Api$d(),
-        coingecko: new Api$e(),
-        coinmarketcap: new Api$f(),
-        cryptocompare: new Api$g(),
-        ftx: new Api$h(),
-        hitbtc: new Api$i(),
-        huobi: new Api$j(),
-        kraken: new Api$k(),
-        kucoin: new Api$l(),
+        binance: new Api$1(),
+        binanceFutures: new Api$2(),
+        bitfinex: new Api$3(),
+        bitmex: new Api$4(),
+        bitpay: new Api$5(),
+        bitso: new Api$6(),
+        bitstamp: new Api$7(),
+        blinktrade: new Api$8(),
+        btcmarkets: new Api$9(),
+        bxinth: new Api$a(),
+        cexio: new Api$b(),
+        coinbase: new Api$c(),
+        coingecko: new Api$d(),
+        coinmarketcap: new Api$e(),
+        cryptocompare: new Api$f(),
+        ftx: new Api$g(),
+        hitbtc: new Api$h(),
+        huobi: new Api$i(),
+        kraken: new Api$j(),
+        kucoin: new Api$k(),
+        novadax: new Api$l(),
         paymium: new Api$m(),
-        poloniex: new Api$6(),
+        poloniex: new Api$5(),
         satangpro: new Api$n(),
         vccexchange: new Api$o(),
     };

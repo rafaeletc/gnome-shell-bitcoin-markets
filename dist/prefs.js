@@ -762,7 +762,7 @@ var prefs = (function (Gtk, GObject, Gio, Soup) {
         }
         getLast(data) {
             if (data.message == 'Success') {
-                return data.data[lastPrice];
+                return data.data.lastPrice;
             }
         }
     }

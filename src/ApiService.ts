@@ -2,7 +2,7 @@ const Mainloop = imports.mainloop;
 
 import * as BaseProvider from './BaseProvider';
 
-import * as ProviderNovaDAX from './providers/ProviderNovadax';
+import * as ProviderNovaDAX from './providers/ProviderNovaDAX';
 import * as ProviderBinance from './providers/ProviderBinance';
 import * as ProviderBinanceFutures from './providers/ProviderBinanceFutures';
 import * as ProviderBitfinex from './providers/ProviderBitfinex';

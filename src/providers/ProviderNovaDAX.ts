@@ -1,7 +1,7 @@
 import * as BaseProvider from '../BaseProvider';
 
 export class Api extends BaseProvider.Api {
-  apiName = 'Binance';
+  apiName = 'NovaDAX';
 
   apiDocs = [['API Docs', 'https://doc.novadax.com/en-US/#get-latest-ticker-for-specific-pair']];
 
@@ -11,7 +11,7 @@ export class Api extends BaseProvider.Api {
     return `https://api.novadax.com/v1/market/ticker/?symbol=${base}_${quote}`;
   }
 
-  getLast({ price }) {
-    return price;
+  getLast({ data }) {
+    return data[lastPrice];
   }
 }
